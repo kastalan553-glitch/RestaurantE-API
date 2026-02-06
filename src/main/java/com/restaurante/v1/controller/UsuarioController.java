@@ -20,11 +20,13 @@ public class UsuarioController {
 	
 	@PostMapping("/agregar")
 	public Usuario crearUsuario(@RequestBody Usuario usuario) {
-		 return usuarioRepository.save(usuario);
+
+		return usuarioRepository.save(usuario);
 	 }
 	
 	@GetMapping("/listar")
 	public List<Usuario> listarUsuarios(){
+
 		return usuarioRepository.findAll();
 	}
 
