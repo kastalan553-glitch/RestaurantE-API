@@ -48,4 +48,12 @@ public class UsuarioController {
 		usuarioRepository.deleteById(id);
 		return ResponseEntity.ok("Usurio eliminado");
 	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<?> login(@RequestBody Usuario usuario) {
+	    return usuarioRepository.findByNombreAndClave(usuario.getNombre(), usuario.getClave())
+	            .map(usu -> ResponseEntity.ok((Object) usu)) 
+	            .orElse(ResponseEntity.status(401).body("Credenciales incorrectas"));
+	}
+	
 }
