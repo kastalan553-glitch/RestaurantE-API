@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "platos")
 public class Plato {
     @Id
-    @Column(columnDefinition = "CHAR(5)", unique = true, nullable = false)
+    @Column(columnDefinition = "CHAR(5)", nullable = false)
     private String idplato;
 
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)

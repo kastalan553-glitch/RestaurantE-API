@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Mozo {
 
     @Id
-    @Column(columnDefinition = "CHAR(8)", unique = true, nullable = false)
+    @Column(columnDefinition = "CHAR(8)", nullable = false)
     private String dnimozo;
     
 	@Column(columnDefinition = "VARCHAR(100)", nullable = false)
@@ -30,7 +30,7 @@ public class Mozo {
 	@JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate fechaingreso;
 	
-	@Column(columnDefinition = "CHAR(10)", unique = true, nullable = false)
+	@Column(columnDefinition = "CHAR(10)", nullable = false)
     private String movil;
 	
 	@Column(columnDefinition = "VARCHAR(50)",nullable = false)

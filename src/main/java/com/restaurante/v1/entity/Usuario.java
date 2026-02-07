@@ -21,9 +21,9 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(unique = true, nullable = false)
+	@Column(columnDefinition = "CHAR(15)", nullable = false)
 	private String nombre;
-	@Column(nullable = false)
+	@Column(columnDefinition = "CHAR(10)", nullable = false)
 	private String clave;
 
 }

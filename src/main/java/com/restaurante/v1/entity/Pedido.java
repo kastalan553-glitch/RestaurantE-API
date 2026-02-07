@@ -16,7 +16,7 @@ import java.time.LocalTime;
 public class Pedido {
 
     @Id
-    @Column(columnDefinition = "CHAR(7)", unique = true, nullable = false)
+    @Column(columnDefinition = "CHAR(7)", nullable = false)
     private String idpedido;
 
     @Column(columnDefinition = "CHAR(2)", nullable = false)
@@ -25,9 +25,11 @@ public class Pedido {
     @JsonFormat(pattern = "HH:mm")
     @Column(nullable = false)
     private LocalTime hora;
+    
+    @Column(nullable = false)
     private int cantidad;
 
-    @Column(columnDefinition = "VARCHAR(100)", unique = true, nullable = false)
+    @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String observacion;
 
     //pedido-plato
