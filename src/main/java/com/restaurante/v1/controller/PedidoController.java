@@ -38,6 +38,7 @@ public class PedidoController {
     		ped.setNmesa(pedido.getNmesa());
     		ped.setHora(pedido.getHora());
     		ped.setCantidad(pedido.getCantidad());
+    		ped.setTipoPlato(pedido.getTipoPlato());
     		ped.setObservacion(pedido.getObservacion());
     		ped.setPlato(pedido.getPlato());
     		ped.setMozo(pedido.getMozo());

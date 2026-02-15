@@ -28,6 +28,9 @@ public class Pedido {
     
     @Column(nullable = false)
     private int cantidad;
+    
+    @Column(columnDefinition = "VARCHAR(20)", nullable = false)
+    private String tipoPlato;
 
     @Column(columnDefinition = "VARCHAR(100)", nullable = false)
     private String observacion;
