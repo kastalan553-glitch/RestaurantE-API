@@ -35,11 +35,11 @@ public class MozoController {
 	@PutMapping("/actualizar/{id}")
 	public Mozo actualizarMozo(@PathVariable String id, @RequestBody Mozo mozo) {
 		return mozoRepository.findById(id).map(mzo ->{
-			mzo.setNombre(mzo.getNombre());
-			mzo.setDireccion(mzo.getDireccion());
-			mzo.setFechaingreso(mzo.getFechaingreso());
-			mzo.setMovil(mzo.getMovil());
-			mzo.setEmail(mzo.getEmail());
+			mzo.setNombre(mozo.getNombre());
+			mzo.setDireccion(mozo.getDireccion());
+			mzo.setFechaingreso(mozo.getFechaingreso());
+			mzo.setMovil(mozo.getMovil());
+			mzo.setEmail(mozo.getEmail());
 			return mozoRepository.save(mzo);
 		}).orElse(null);
 	}
